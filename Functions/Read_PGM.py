@@ -12,6 +12,10 @@ def read_pgm_test(file_path):
 
     cv2.imshow('Imagem PGM', imagem)
 
-    cv2.waitKey(0)
+    cv2.waitKey(10000)
     cv2.destroyAllWindows()
 
+def read_pgm(file_path):
+    imagem = cv2.imread(f'{file_path}', cv2.IMREAD_UNCHANGED)
+    #Return the imagem in numpu array
+    return imagem
