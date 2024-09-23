@@ -15,4 +15,11 @@ def apply_mean_filter(image, filter_size):
 
     return filtered_image
 
+def quantize_image(image, num_levels):
+
+    image_array = np.array(image)
+    
+    quantized_array = np.floor(image_array / (256 / num_levels)) * (256 / num_levels)
+    
+    return quantized_array.astype(np.uint8)
 
